@@ -1,0 +1,80 @@
+/* h1 {
+  color: pink;
+}
+
+.subtitulo {
+  color: red;
+}
+
+#subtitulo-id {
+  color: aqua;
+  font-size: 20px;
+}
+
+.parrafo {
+  color: coral;
+}
+
+#frase1 {
+  color: blue;
+}
+
+.anclaje {
+  color: fuchsia;
+}
+
+.card {
+  background-color: brown;
+  color: white;
+  font-size: 35px;
+}
+
+.card-2 {
+  background-color: #033268;
+  color: white;
+}
+
+.card-2 .parrafo-1 {
+  font-size: 25px;
+}
+
+.card-2 .parrafo-2 {
+  font-size: 15px;
+}
+
+.card-2 .parrafo-3 {
+  color: red;
+  font-size: 20px;
+} */
+
+body {
+  background-color: #033565;
+}
+
+h1 {
+  text-align: center;
+}
+.logo-funval {
+  height: 70px;
+}
+
+.img {
+  height: 70px;
+  width: 70px;
+  border-radius: 100px;
+}
+div li {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 16px;
+}
+
+li {
+  color: white;
+  padding: 5px;
+}
+
+.sub {
+  color: white;
+}

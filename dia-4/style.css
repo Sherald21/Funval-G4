@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor {
+  height: 600px;
+  border: red 2px solid;
+  width: 300px;
+  color: white;
+  position: relative;
+}
+
+.caja {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.caj1 {
+  background-color: blueviolet;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+.caj2 {
+  background-color: burlywood;
+}
+.caj3 {
+  background-color: coral;
+}
+.caj4 {
+  background-color: chartreuse;
+}
+.caj5 {
+  background-color: cyan;
+}
+
+.parrafo {
+  font-size: 100px;
+  padding: 20px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: brown;
+  color: white;
+  padding: 15px;
+  font-size: 20px;
+  z-index: 10;
+}

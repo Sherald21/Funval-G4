@@ -1,0 +1,93 @@
+/*.btn {
+  padding-right: 50px;
+  padding-top: 50px;
+  border: 1px solid red;
+  border-radius: 16px;
+}
+
+.aleja {
+  border: 1px solid red;
+  padding-left: 50px;
+  padding-bottom: 50px;
+  border-radius: 16px;
+}
+
+.papa {
+  display: flex;
+  border: 1px solid orange;
+  gap: 8px;
+  padding: 20px 15px 20px 10px;
+  margin: 10px;
+}
+
+.exercise1 {
+  padding: 20px;
+  background-color: aquamarine;
+}
+
+.exercise2 {
+  background-color: brown;
+}
+
+.exercise2_1 {
+  background-color: blueviolet;
+  margin: 20px;
+}
+
+.exercise3 {
+  background-color: chocolate;
+  margin: 20px;
+}
+
+.exercise3_1 {
+  background-color: darkseagreen;
+  padding: 20px;
+}
+
+.exercise4 {
+  border-top: 5px solid red;
+  border-left: 3px dashed green;
+  border-bottom: 2px dotted blue;
+  border-right: 6px double yellow;
+}
+
+.exercise5 {
+  width: 300px;
+  margin: 0 auto;
+  background-color: crimson;
+}
+
+.exercise6 {
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  background-color: darkgray;
+  padding: 40px;
+  border: 4px solid black;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+table {
+  border: solid 2px black;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: solid 2px black;
+  padding: 10px;
+}

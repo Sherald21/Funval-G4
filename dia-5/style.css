@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  background-color: beige;
+  width: 600px;
+  gap: 20px;
+}
+
+.caja {
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+.caja1 {
+  background-color: cadetblue;
+}
+.caja2 {
+  background-color: aqua;
+}
+.caja3 {
+  background-color: chocolate;
+}
+.caja4 {
+  background-color: crimson;
+}
+.caja5 {
+  background-color: blanchedalmond;
+}
+.caja6 {
+  background-color: darkcyan;
+}
+
+.grupo1 {
+  display: grid; /* Para crear las dos columnas */
+  grid-template-columns: repeat(3, 100px); /* Dos columnas del mismo tamaño */
+  gap: 10px;
+}
+
+.grupo2 {
+  display: flex;
+  align-items: flex-start;
+}
+
+.caja7 {
+  background-color: gold;
+  height: 300px;
+  width: 200px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Extra small (xs) – menores a 576px */
+@media (max-width: 575.98px) {
+  /* estilos pantallas menores a 576px */
+  .container {
+    flex-direction: column;
+    flex-direction: wrap-reverse;
+  }
+  .caja {
+    background-color: crimson;
+  }
+}

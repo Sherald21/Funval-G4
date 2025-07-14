@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" class="dark" id="todo">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <title>Document</title>
+  </head>
+    <body
+   class="h-screen flex items-center justify-center flex-col p-4 bg-[url(https://wallpapers-clan.com/wp-content/uploads/2025/01/pokemon-ash-ketchum-charizard-bond-desktop-wallpaper-preview.jpg)] bg-center bg-cover dark:bg-[url(https://image-5.uhdpaper.com/wallpaper/pikachu-pokemon-2k-wallpaper-uhdpaper.com-263@5@d.jpg)]"
+  >
+    <h1 class="dark:text-white">Hola broo</h1>
+    <button class="bg-blue-600 text-white p-4 rounded-2xl ml-2" id="btn">
+      cambio de tema
+    </button>
+    <script>
+      let botonCambio = document.querySelector("#btn");
+      let todo = document.querySelector("#todo");
+      botonCambio.addEventListener("click", function () {
+        todo.classList.toggle("dark");
+      });
+    </script>
+  </body> 
+</html>

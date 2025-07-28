@@ -5,15 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./output.css" />
+    <script src="./main.js" defer type="module"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <title>Geraldine Revilla</title>
   </head>
+
   <body class="dark:bg-[#00070d] pt-24 pb-24 bg-white-">
+    <!-- Botón Toggle (visible solo en móviles) -->
+    <button
+      id="menu-toggle"
+      class="md:hidden fixed top-4 left-4 z-50 text-white p-2 bg-black/60 rounded"
+    >
+      ☰
+    </button>
     <header class="flex items-center justify-center text-white font-bold">
       <div class="p-[4px] rounded-full">
         <nav
+          id="mobile-menu"
           class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 flex items-center justify-center p-2 gap-4 rounded-full backdrop-blur-[18px] bg-black/40 text-sm md:text-lg lg:text-2lg font-medium border border-cyan-400"
         >
           <a
@@ -38,30 +48,29 @@
           >
         </nav>
       </div>
-      <button class="fixed top-4 right-4 z-50" id="btn">
-        <!-- Botón modo oscuro: ahora el input tiene id="toggle-dark" -->
-    <label class="fixed top-4 right-4 z-50 relative inline-flex items-center cursor-pointer">
-   <input id="toggle-dark" class="sr-only peer" type="checkbox" />
-    <div
-    class="w-20 h-10 rounded-full bg-gradient-to-r from-yellow-300 to-orange-400
-    peer-checked:from-blue-400 peer-checked:to-indigo-500 transition-all duration-500
-    after:content-['☀️'] after:absolute after:top-1 after:left-1 after:bg-white after:rounded-full
-    after:h-8 after:w-8 after:flex after:items-center after:justify-center after:transition-all
-    after:duration-500 peer-checked:after:translate-x-10 peer-checked:after:content-['🌙']
-    after:shadow-md after:text-lg"
-  ></div>
-</label>
 
+      <!-- Botón modo oscuro: ahora el input tiene id="toggle-dark" -->
+      <button class="fixed top-4 right-4 z-50">
+        <label
+          class="fixed top-4 right-4 z-50 inline-flex items-center cursor-pointer"
+        >
+          <input id="toggle-dark" class="sr-only peer" type="checkbox" />
+          <div
+            class="w-20 h-10 md:w-10 md:h-5 rounded-full bg-gradient-to-r from-yellow-300 to-orange-400 peer-checked:from-blue-400 peer-checked:to-indigo-500 transition-all duration-500 after:content-['☀️'] after:absolute after:top-1 after:left-1 after:bg-white after:rounded-full after:h-8 after:w-8 after:flex after:items-center after:justify-center after:transition-all after:duration-500 peer-checked:after:translate-x-10 peer-checked:after:content-['🌙'] after:shadow-md after:text-lg"
+          ></div>
+        </label>
       </button>
     </header>
 
     <main
       class="w-full flex flex-col items-center justify-center min-h-screen text-center"
     >
+      <!-- Este es para el HERO -->
       <div id="hero" class="scroll-mt-24 dark:text-white text-center">
         <h3 class="text-2xl">
           Hello, I'm <strong class="text-cyan-300">Geraldine</strong>
         </h3>
+
         <h1 class="text-7xl font-bold">
           Fronted <strong class="text-cyan-300"><</strong>Developer<strong
             class="text-cyan-300"
@@ -91,112 +100,35 @@
         />
       </div>
 
+      <!-- Este es para los SKILLS -->
       <h1 class="text-7xl font-bold dark:text-white p-4">Skills</h1>
+      0
       <div
         id="skills"
         class="scroll-mt-24 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 justify-center px-4"
-      >
-        <a
-          href="https://html.spec.whatwg.org/"
-          target="_blank"
-          class="card-categoria bg-gray-200 dark:bg-gray-900 flex flex-col items-center justify-center p-4 rounded-2xl sm:p-7 max-w-[220px] min-h-[250px] transform transition-transform duration-300 hover:scale-105 hover:shadow-lg shadow-cyan-500/30"
-        >
-          <img src="./img/html.png" alt="HTML" class="w-32 rounded-2xl mb-2" />
-          <h2 class="dark:text-white text-2xl">HTML</h2>
-        </a>
+      ></div>
 
-        <a
-          href="https://www.w3.org/Style/CSS/Overview.en.html"
-          target="_blank"
-          class="card-categoria bg-gray-200 dark:bg-gray-900 flex flex-col items-center justify-center p-4 rounded-2xl sm:p-7 max-w-[220px] min-h-[250px] transform transition-transform duration-300 hover:scale-105 hover:shadow-lg shadow-cyan-500/30"
-        >
-          <img src="./img/css.png" alt="css" class="w-32 rounded-2xl mb-2" />
-          <h2 class="dark:text-white text-2xl">CSS</h2>
-        </a>
-
-        <a
-          href="https://tailwindcss.com/"
-          target="_blank"
-          class="card-categoria bg-gray-200 dark:bg-gray-900 flex flex-col items-center justify-center p-4 rounded-2xl sm:p-7 max-w-[220px] min-h-[250px] transform transition-transform duration-300 hover:scale-105 hover:shadow-lg shadow-cyan-500/30"
-        >
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSDKn3vA2YUbXzN0ZC3gALWJ08gJN-Drl15w&s"
-            alt="tailwind"
-            class="w-32 rounded-2xl mb-2"
-          />
-          <h2 class="dark:text-white text-2xl">Tailwind</h2>
-        </a>
-
-        <a
-          href="https://cert.efset.org/pLW251"
-          target="_blank"
-          class="card-categoria bg-gray-200 dark:bg-gray-900 flex flex-col items-center justify-center p-4 rounded-2xl sm:p-7 max-w-[220px] min-h-[250px] transform transition-transform duration-300 hover:scale-105 hover:shadow-lg shadow-cyan-500/30"
-        >
-          <img
-            src="./img/eng.png"
-            alt="english"
-            class="w-32 rounded-2xl mb-2"
-          />
-          <h2 class="dark:text-white text-2xl">ENGLISH-B2</h2>
-        </a>
-      </div>
+      <!-- Este es para los PROJECTS -->
       <h1 class="text-7xl font-bold dark:text-white p-4">Projects</h1>
-
+      <br />
       <div
         id="projects"
-        target="_blank"
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 justify-center px-4"
+        class="scroll-mt-24 flex flex-col bg-gray-200 dark:bg-gray-800 w-64 p-2 rounded-3xl gap-1"
       >
-      <a
-          href="./Practica Calificada 5/"
-          target="_blank"
-          class="project-1 text-black text-2xl bg-gray-200 dark:bg-gray-900 dark:text-white flex flex-row items-center justify-center p-4 rounded-2xl sm:p-7 max-w-[400px] min-h-[250px] transform transition-transform duration-300 hover:scale-105 hover:shadow-lg shadow-cyan-500/30"
-        >Practica Calificada 5
-        
-        </a> 
-       <a
-          href="./Practica Calificada 6/"
-          target="_blank"
-          class="project-1 text-black text-2xl bg-gray-200 dark:bg-gray-900 dark:text-white flex flex-row items-center justify-center p-4 rounded-2xl sm:p-7 max-w-[400px] min-h-[250px] transform transition-transform duration-300 hover:scale-105 hover:shadow-lg shadow-cyan-500/30"
-        >Practica Calificada 6
-        
-        </a> 
-       <a
-          href="./PracticaCalificada7/"
-          target="_blank"
-          class="project-1 text-black text-2xl bg-gray-200 dark:bg-gray-900 dark:text-white flex flex-row items-center justify-center p-4 rounded-2xl sm:p-7 max-w-[400px] min-h-[250px] transform transition-transform duration-300 hover:scale-105 hover:shadow-lg shadow-cyan-500/30"
-        >Practica Calificada 7
-        
-        </a> 
-      
-
-
-      <a
-          href="./dia-9/ejercicio/index.html"
-          target="_blank"
-          class="project-1 bg-gray-200 dark:bg-gray-900 flex flex-row items-center justify-center p-4 rounded-2xl sm:p-7 max-w-[400px] min-h-[250px] transform transition-transform duration-300 hover:scale-105 hover:shadow-lg shadow-cyan-500/30"
-        >
-          <img src="./img/proj1.png" alt="project1" class="w-[200px]" />
-          <div class="dark:text-white">
-            <h1 class="font-bold text-2xl">Pet shelter</h1>
-            <p c¿>A website where you will find pets to adopt</p>
-          </div>
-        </a>
         <a
-          href="./dia-10/index.html"
-          target="_blank"
-          class="project-2 bg-gray-200 dark:bg-gray-900 flex flex-row items-center justify-center p-4 rounded-2xl sm:p-7 max-w-[400px] min-h-[250px] transform transition-transform duration-300 hover:scale-105 hover:shadow-lg shadow-cyan-500/30"
-        >
-          <img src="./img/proj2.png" alt="project2" class="w-[200px]" />
-          <div class="dark:text-white">
-            <h1 class="font-bold text-2xl">Bookshop</h1>
-            <p>Find books by category and buy online</p>
-          </div>
+          href="./projects.html"
+          class="bg-cyan-500 hover:bg-cyan-400 hover:scale-[1.065] hover:translate-y-[-7px] hover:rounded-[23px] hover:rounded-bl-none hover:rounded-br-none px-6 py-2 rounded-2xl rounded-bl-lg rounded-br-lg transition-all text-center text-[#d8e5f9] hover:text-black font-medium cursor-pointer"
+          >View projects
         </a>
       </div>
+
+      <!-- Este es para el resume -->
       <h1 class="text-7xl font-bold dark:text-white p-4 m-4">Resume</h1>
 
-      <div class="flex flex-col bg-gray-200 dark:bg-gray-800 w-64 p-2 rounded-3xl gap-1">
+      <div
+        id="resume"
+        class="scroll-mt-24 flex flex-col bg-gray-200 dark:bg-gray-800 w-64 p-2 rounded-3xl gap-1"
+      >
         <a
           href="./img/resume.pdf"
           download="resume"
@@ -211,11 +143,11 @@
           View Page
         </a>
       </div>
+      <!-- Este es para los contactos -->
 
       <h1 class="text-7xl font-bold text-white p-4">Contacts</h1>
 
-      <div id="contacts" class="scroll-mt-24 flex items-center gap-4 m-10 ">
-        
+      <div id="contacts" class="scroll-mt-24 flex items-center gap-4 m-10">
         <div class="social-button flex flex-col">
           <button class="relative w-12 h-12 rounded-full group">
             <div
@@ -321,92 +253,78 @@
           </button>
         </div>
       </div>
-          <div class="container px-4 mx-auto ">
-  <div class="mx-auto">
-    <div class="max-w-md mx-auto px-8 py-6 bg-gray-100 rounded-lg shadow-lg">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Contact Us</h2>
-      <form>
-        <div class="mb-4">
-          <label class="block text-gray-800 mb-1" for="name">Your Name</label>
-          <input
-            class="w-full px-4 py-2 bg-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 transition duration-300"
-            placeholder="Enter your name"
-            type="text"
-          />
-        </div>
-        <div class="mb-4">
-          <label class="block text-gray-800 mb-1" for="email">Your Email</label>
-          <input
-            class="w-full px-4 py-2 bg-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 transition duration-300"
-            placeholder="Enter your email"
-            name="email"
-            id="email"
-            type="email"
-          />
-        </div>
-        <div class="mb-4">
-          <label class="block text-gray-800 mb-1" for="message"
-            >Your Message</label
+      <!--  FORMULARIO CONTACTOS<-->
+      <div class="container px-4 mx-auto">
+        <div class="mx-auto">
+          <div
+            class="max-w-md mx-auto px-8 py-6 bg-gray-100 rounded-lg shadow-lg"
           >
-          <textarea
-            class="w-full px-4 py-2 bg-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 transition duration-300"
-            rows="4"
-            placeholder="Enter your message"
-            name="message"
-            id="message"
-          ></textarea>
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+              Contact Us
+            </h2>
+            <form id="contact-form">
+              <div class="mb-4">
+                <label class="block mb-1" for="name">Your Name</label>
+                <input
+                  id="form-name"
+                  class="text-gray-800 w-full px-4 py-2 bg-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 transition duration-300"
+                  placeholder="Enter your name"
+                  type="text"
+                />
+              </div>
+              <p id="error-name" class="text-sm mb-4"></p>
+              <div class="mb-4">
+                <label class="block text-gray-800 mb-1" for="email"
+                  >Your Email</label
+                >
+                <input
+                  id="form-email"
+                  class="w-full px-4 py-2 bg-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 transition duration-300"
+                  placeholder="Enter your email"
+                  name="email"
+                  type="email"
+                />
+              </div>
+              <p id="error-email" class="text-sm mb-4"></p>
+              <div class="mb-4">
+                <label class="block text-gray-800 mb-1" for="message"
+                  >Your Message</label
+                >
+                <textarea
+                  id="form-message"
+                  class="w-full px-4 py-2 bg-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400 transition duration-300"
+                  rows="4"
+                  placeholder="Enter your message"
+                  name="message"
+                ></textarea>
+              </div>
+              <p id="error-message" class="text-sm mb-4"></p>
+              <button
+                class="w-full bg-cyan-400 text-gray-800 py-2 px-4 rounded-lg hover:bg-cyan-400 transition duration-300"
+                type="submit"
+              >
+                Send Message
+              </button>
+              <p id="form-status" class="mt-4 text-center text-sm"></p>
+            </form>
+          </div>
         </div>
-        <button
-          class="w-full bg-cyan-400 text-gray-800 py-2 px-4 rounded-lg hover:bg-cyan-400 transition duration-300"
-          type="submit"
-        >
-          Send Message
-        </button>
-      </form>
-    </div>
-  </div>
-</div>
-
-
+      </div>
 
       <a href="#hero">
-      <button  
-  class="fixed bottom-6 right-6 z-50 cursor-pointer after:content-['scroll_to_top']  dark:after:text-white after:absolute after:text-nowrap after:scale-0 hover:after:scale-100 after:duration-200 w-16 h-16 rounded-full border border-4 border-cyan-400 bg-white dark:bg-black pointer flex items-center justify-center duration-300 hover:rounded-[50px] hover:w-36 group/button overflow-hidden active:scale-90"
-> 
-  <svg
-    class="w-3 fill-dark dark:fill-white delay-50 duration-200 group-hover/button:-translate-y-12"
-    viewBox="0 0 384 512"
-  >
-    <path
-      d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
-    ></path>
-  </svg>
-</button>
-</a>
-
-      </button>
+        <button
+          class="fixed bottom-6 right-6 z-50 cursor-pointer after:content-['scroll_to_top'] dark:after:text-white after:absolute after:text-nowrap after:scale-0 hover:after:scale-100 after:duration-200 w-16 h-16 rounded-full border border-4 border-cyan-400 bg-white dark:bg-black pointer flex items-center justify-center duration-300 hover:rounded-[50px] hover:w-36 group/button overflow-hidden active:scale-90"
+        >
+          <svg
+            class="w-3 fill-dark dark:fill-white delay-50 duration-200 group-hover/button:-translate-y-12"
+            viewBox="0 0 384 512"
+          >
+            <path
+              d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
+            ></path>
+          </svg>
+        </button>
+      </a>
     </main>
   </body>
-  <script>
-  const toggle = document.getElementById("toggle-dark");
-  const html = document.documentElement;
-
-  // Si el usuario ya eligió tema antes, lo aplicamos
-  if (localStorage.getItem("theme") === "dark") {
-    html.classList.add("dark");
-    toggle.checked = true;
-  }
-
-  toggle.addEventListener("change", () => {
-    html.classList.toggle("dark");
-
-    // Guardamos la preferencia
-    if (html.classList.contains("dark")) {
-      localStorage.setItem("theme", "dark");
-    } else {
-      localStorage.setItem("theme", "light");
-    }
-  });
-</script>
-
 </html>

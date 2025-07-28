@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" id="todo">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <script src="./projects.js" defer type="module"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <title>Geraldine Revilla - Projects</title>
+  </head>
+
+  <body class="dark:bg-[#00070d] pt-24 pb-24 bg-white-">
+    <header class="flex items-center justify-center text-white font-bold">
+      <div class="p-[4px] rounded-full">
+        <nav
+          class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 flex items-center justify-center p-2 gap-4 rounded-full backdrop-blur-[18px] bg-black/40 text-sm md:text-lg lg:text-2lg font-medium border border-cyan-400"
+        >
+          <a
+            href="./index.html"
+            class="transition-colors duration-300 hover:text-cyan-400"
+            >Home</a
+          >
+        </nav>
+      </div>
+      <!-- Botón modo oscuro: ahora el input tiene id="toggle-dark" -->
+
+      <button class="fixed top-4 right-4 z-50">
+        <label
+          class="fixed top-4 right-4 z-50 inline-flex items-center cursor-pointer"
+        >
+          <input id="toggle-dark" class="sr-only peer" type="checkbox" />
+          <div
+            class="w-20 h-10 md:w-10 md:h-5 rounded-full bg-gradient-to-r from-yellow-300 to-orange-400 peer-checked:from-blue-400 peer-checked:to-indigo-500 transition-all duration-500 after:content-['☀️'] after:absolute after:top-1 after:left-1 after:bg-white after:rounded-full after:h-8 after:w-8 after:flex after:items-center after:justify-center after:transition-all after:duration-500 peer-checked:after:translate-x-10 peer-checked:after:content-['🌙'] after:shadow-md after:text-lg"
+          ></div>
+        </label>
+      </button>
+    </header>
+
+    <main
+      class="w-full flex flex-col items-center justify-center min-h-screen text-center"
+    >
+      <!-- Este es para los PROJECTS -->
+      <h1 class="text-7xl font-bold dark:text-white p-4">Projects</h1>
+      <br />
+      <div
+        id="projects"
+        target="_blank"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 justify-center px-4"
+      ></div>
+    </main>
+  </body>
+</html>
